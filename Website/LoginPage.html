@@ -2,8 +2,16 @@
 <html>
 <head>
     <title>Budget Buddy</title>
+
+    <div>
     <link rel="icon" type="image/png" href="Images/Bufget Buddy Goldie Pic.png">
+    </div>
+
     <style>
+        div.Turtle {
+        margin-top: 100px;
+        }
+
         body {
             margin: 0; 
             background-color: rgb(148, 197, 255); 
@@ -15,58 +23,97 @@
         h2 {
             margin: 0;
             background-color: rgb(95, 168, 255);
-            padding: 10px; 
-        }
-
-        div.relative {
-            position: relative;
-            right: -20px;
-            margin-top: 60px; 
             padding: 20px; 
-        } 
-
-        div.absolute {
-            position: absolute;
-            font-family:'Inter', sans-serif; 
-            top: 100px; 
-            margin-left: 25px;
-            padding: 10px;
         }
 
         div.centeredImage {
             text-align:center;
         }
 
-        div.rectangle {
-            margin-top:75px;
-            margin-left:30px;
-            height: 50px;
-            width: 40vw;
-            border-radius: 15px;
-            background-color: #ffffff;
-        }
-
         div.bulletList {
             position: fixed; 
-            right: 10px;
-            top: 10px;
+            right: 20px;
+            top: 20px;
         }
 
         div.squareTips {
-            position:fixed;
-            margin-top:-155px;
-            right:30px;
-            height: 300px;
-            width: 48vw;
-            border-radius: 35px;
-            background-color: #ffffff;
+        position: fixed; 
+        right: 30px; 
+        top: 100px; 
+        height: auto; 
+        min-height: 400px; 
+        width: 48vw; 
+        border-radius: 35px; 
+        color: rgb(95, 168, 255);
+        font-size: 34px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        background-color: rgb(255, 255, 255); 
+        display: flex;
+        flex-direction: column; 
+        justify-content: space-between;
+        align-items: center; 
+        padding: 20px; 
+        text-align: center; 
+        box-sizing: border-box;
         }
-</style>
+
+        div.squareTips p {
+        flex-grow: 1; 
+        color: rgb(95, 168, 255);
+        margin: 20px 0; 
+        text-align: center; 
+        }
+
+
+        input[type="Email"] {
+        width: 35%; 
+        padding: 12px;
+        margin: 0px;
+        border: 2px solid #ccc;
+        border-radius: 4px; 
+        box-sizing: border-box;
+        margin-top:75px;
+        margin-left:30px;
+        height: 60px;
+        width: 35vw;
+        border-radius: 15px;
+        background-color: #ffffff;
+        }
+
+        input[type="Password"] {
+        width: 35%; 
+        padding: 12px; 
+        margin: 0px; 
+        border: 2px solid #ccc; 
+        border-radius: 4px; 
+        box-sizing: border-box;
+        margin-top:75px;
+        margin-left:30px;
+        height: 60px;
+        width: 35vw;
+        border-radius: 15px;
+        background-color: #ffffff;
+        }
+        
+        label, input[type="password"] {
+        display: block; 
+        margin-bottom: 10px;
+        }
+        
+        hr {
+            border: none;
+            height: 3px;
+            background-color: rgb(95, 168, 255); 
+            margin: 10px 0; 
+            width: vh;
+        }
     </style>
 </head>
 
 <body>
-    <h2>Budget Buddy</h2>
+    <h2>
+        Budget Buddy
+    </h2>
 
     <h1 style=
     "margin:-55px;
@@ -78,29 +125,126 @@
     </h1>
 
     <div class="centeredImage">
-    <img src="Images/Bufget Buddy Goldie Pic.png" 
+
+    <img style="top: 10px;" src="Images/Bufget Buddy Goldie Pic.png" 
     width="115">
+
+
+
+        
+    <form style="width: 35vw; margin-right: auto; margin-left: 0;">
+
+        <label 
+        for="email"
+        style="display: block; 
+        margin-left: 50px;
+        text-align: left;
+        margin-top:20px;">
+        Email
+        </label>
+    
+        <input 
+        placeholder="Please Enter your Email"
+        type="email" 
+        id="email" 
+        maxlength="30" 
+        minlength="6" 
+        required
+        style="margin-top: -8px;
+        margin-left:30px;
+        width: 100%; 
+        font-size: 20px; 
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+        padding: 12px; 
+        height: 60px; 
+        border-radius: 15px; 
+        background-color: #ffffff; 
+        border: 2px solid #ccc; 
+        float: left;">
+    
+        <label 
+        for="password"
+        style="display: block; 
+        margin-top: 100px; 
+        margin-left: 50px;
+        text-align: left;">
+        Password
+        </label>
+    
+        <input 
+        placeholder="Please Enter your Password"
+        type="password" 
+        id="password" 
+        maxlength="30" 
+        minlength="6" 
+        required
+        style="margin-top:-8px;
+        margin-left:30px;
+        width: 100%; 
+        font-size: 20px; 
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+        padding: 12px; 
+        height: 60px; 
+        border-radius: 15px; 
+        background-color: #ffffff; 
+        border: 2px solid #ccc; 
+        float: left;">
+        
+        <input type="submit" 
+        value="LOG IN"
+        style="width: 200px;
+        font-size: 30px; 
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+        font-weight: bold; 
+        height: 50px;
+        margin-top: 20px; 
+        margin-left: 70px; 
+        background-color: #ffffff; 
+        border: 2px solid #ccc; 
+        border-radius: 10px; 
+        cursor: pointer;"
+        onmousedown="this.style.backgroundColor='#e0e0e0';" 
+        onmouseup="this.style.backgroundColor='#ffffff';"> 
+        
+                
+        
+        <input type="reset" 
+        value="Reset"
+        style="width: 100px;
+        font-size: 15px; 
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+        height: 25px;
+        margin-top: 10px; 
+        margin-left: 70px; 
+        background-color: #ffffff;
+        border: 2px solid #ccc; 
+        border-radius: 10px; 
+        cursor: pointer;"
+        onmousedown="this.style.backgroundColor='#e0e0e0';" 
+        onmouseup="this.style.backgroundColor='#ffffff';"> 
+
+    
+    </form>
+    
+    <div class="squareTips">
+        <b>Why you should join?</b>
+        <ul style="font-size: 20px; padding-left: 0;">
+            App will let you focus on your goals and achieve them!
+            <hr>
+            Help you build good financial habits for the long term.
+            <hr>
+            Never worry about budget planning again!
+            <hr>
+            Tomorrow you will regret you did not start saving money today!
+        </ul>
     </div>
     
+        
     <div class="bulletList">
-    <img src="Images\bullet-list.png" 
-    width="30">
+    <img 
+    src="Images\bullet-list.png" 
+    width="40">
     </div>
 
-    <div class="absolute"> 
-        <p>Email:</p>
-    </div>
-    
-    <div class="rectangle"></div>
-    <div class="rectangle"; style="margin-top: 50px;"></div>
-
-    <div class="squareTips"></div>
-
-
-
-    <div class="absolute"; 
-    style="margin-top:100px"> 
-        <p>Password:</p>
-    </div>
 </body>
 </html>
